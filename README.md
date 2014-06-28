@@ -31,7 +31,7 @@ Ejecutar el archivo export.sql situado en en el directorio sql; éste creará to
 
 Validar que las secuencias y relaciones hayan sido creadas, así como también que los datos estén cargados en las tablas maestras.
 
-###TODO: Completar escenario
+###TODO: Completar siguientes pasos
 
 
 
