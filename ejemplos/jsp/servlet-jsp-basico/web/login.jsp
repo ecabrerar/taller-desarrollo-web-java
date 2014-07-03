@@ -84,7 +84,7 @@
         }
         %>
             <div id="login_panel">
-                <form action="/DemoServletJSP/loginservlet" method="post" accept-charset="utf-8">
+                <form action="/servlet-jsp-basico/LoginServlet" method="post" accept-charset="utf-8">
                     <div class="login_fields">
                         <div class="field">
                             <label for="email">Usuario</label>

@@ -14,11 +14,7 @@ import org.ecabrerar.examples.jsp.entidades.Usuario;
 
 public class ModeloUsuario {
     
-    public ModeloUsuario(){
-        
-    }
-    
-    
+       
     public List<Usuario> getUsuarios(){
         
         List<Usuario> usuarios = new ArrayList<Usuario>();

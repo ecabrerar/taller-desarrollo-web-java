@@ -12,6 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Ejemplos básicos</h1>
+        <br/>
+        <a href="hola.jsp" target="_blank">JSP Básico</a>
+        <a href="DeclaracionVariable.jsp" target="_blank">Declaración Variable</a>
+        <a href="DeclararMetodo.jsp" target="_blank">Declarar Método</a>
+        <a href="ConstruirObjeto.jsp" target="_blank">Construir Objeto</a>
+        <a href="ExpresionesBasicas.jsp" target="_blank">Expresiones Básicas</a>
     </body>
 </html>

@@ -1,17 +1,15 @@
-package test.web.datamanager;
+package org.ecabrerar.examples.servlet.datamanager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Coneccion {
+  
     
-    public Coneccion(){
-        setDriver();
-    }
-    
-    private void setDriver(){
+    private static void setDriver(){
 
+        //Cargar el driver de mysql
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -21,8 +19,10 @@ public class Coneccion {
     
     public static Connection getConeccion(){
         
+         setDriver();
+         
         //Establish connection to MySQL database
-        String connectionURL = "jdbc:mysql://127.0.0.1/jdevdemo";
+        String connectionURL = "jdbc:mysql://127.0.0.1/tallerjavadb";
         Connection connection=null;
 
         try {

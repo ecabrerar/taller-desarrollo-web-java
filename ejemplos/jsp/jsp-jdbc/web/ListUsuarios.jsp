@@ -6,7 +6,7 @@
 
 <%
 ModeloUsuario modelo = new ModeloUsuario();
-List<Usuario> usuarios = modelo. getUsuarios();
+List<Usuario> usuarios = modelo.getUsuarios();
 %>
 <html>
     <head>

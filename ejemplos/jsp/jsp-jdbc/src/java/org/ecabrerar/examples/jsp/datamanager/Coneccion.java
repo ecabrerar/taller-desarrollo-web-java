@@ -4,13 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Coneccion {
-    
-    public Coneccion(){
-        setDriver();
-    }
-    
-    private void setDriver(){
+public class Coneccion { 
+       
+    private static void setDriver(){
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -20,6 +16,8 @@ public class Coneccion {
     }
     
     public static Connection getConeccion(){
+        
+        setDriver();
         
         //Establish connection to MySQL database
         String connectionURL = "jdbc:mysql://127.0.0.1/tallerjavadb";

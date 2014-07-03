@@ -13,9 +13,8 @@ import org.ecabrerar.examples.servlet.entidades.Usuario;
 
 
 public class ModeloUsuario {
-   
-    public ModeloUsuario(){
-              
+    
+    public ModeloUsuario(){           
     }
     
     /**
@@ -28,7 +27,8 @@ public class ModeloUsuario {
         Statement stmt = null;
         ResultSet rs = null;    
         
-         Connection  conn = Coneccion.getConeccion(); 
+         Connection conn  = Coneccion.getConeccion();
+       
         try {
             
             stmt =  conn.createStatement();
@@ -66,14 +66,13 @@ public class ModeloUsuario {
         
         PreparedStatement pstmt = null;
         ResultSet rs = null;    
-         
-        Connection con = Coneccion.getConeccion(); 
         
+        Connection con = Coneccion.getConeccion();
         Usuario usuario1 = null;
         
         try {
             
-            pstmt =  con.prepareStatement("select * from usuario usu where usu.usuario = ? and usu.clave= ?");
+            pstmt =  con.prepareStatement("select * from usuario where usuario = ? and clave= ?");
             pstmt.setString(1, usuario);
             pstmt.setString(2, pass);
             rs =  pstmt.executeQuery();

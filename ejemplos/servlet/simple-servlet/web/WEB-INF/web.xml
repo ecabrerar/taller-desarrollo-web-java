@@ -8,6 +8,10 @@
         <servlet-name>HolaServlet</servlet-name>
         <url-pattern>/HolaServlet</url-pattern>
     </servlet-mapping>
+    
+    <welcome-file-list>        
+        <welcome-file>HolaServlet</welcome-file>
+    </welcome-file-list>
     <session-config>
         <session-timeout>
             30
