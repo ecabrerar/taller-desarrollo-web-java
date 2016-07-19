@@ -9,9 +9,17 @@ import java.sql.SQLException;
  * @date Jul 19, 2016
  */
 public class Coneccion {
-  
     
-    private static void setDriver(){
+    private static Coneccion INSTANCIA = new Coneccion();
+    
+    private Coneccion(){ 
+    }
+    
+    public static Coneccion getInstancia(){
+        return INSTANCIA;
+    }
+    
+   private void setDriver(){
 
         //Cargar el driver de mysql
         try {
@@ -21,7 +29,7 @@ public class Coneccion {
         }
     }
     
-    public static Connection getConeccion(){
+    public Connection getConeccion() throws SQLException{
         
          setDriver();
          
@@ -33,6 +41,7 @@ public class Coneccion {
             connection = DriverManager.getConnection(connectionURL, "root", "rootweb");
         } catch (SQLException e) {
             System.out.println("Connection failed !!!");
+            throw e;
         }
         
         return connection;

@@ -4,10 +4,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Coneccion {
+/**
+ * @author ecabrerar
+ * @date Jul 19, 2016
+ */
+public final class Coneccion {
     
-    public Coneccion(){
+   private static final Coneccion INSTANCIA = new Coneccion();
+    
+    private Coneccion(){
         setDriver();
+    }
+    
+    public static Coneccion getInstancia(){
+        return INSTANCIA;
     }
     
     private void setDriver(){
@@ -19,7 +29,7 @@ public class Coneccion {
         }
     }
     
-    public static Connection getConeccion(){
+    public Connection getConeccion(){
         
         //Establish connection to MySQL database
         String connectionURL = "jdbc:mysql://127.0.0.1/tallerjavadb";

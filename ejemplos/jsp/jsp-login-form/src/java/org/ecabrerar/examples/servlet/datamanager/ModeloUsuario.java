@@ -30,7 +30,7 @@ public class ModeloUsuario {
 
         List<Usuario> usuarios = new ArrayList<>();
 
-        try (Connection con = Coneccion.getConeccion()) {
+        try (Connection con = Coneccion.getInstancia().getConeccion()) {
 
             try (Statement stmt = con.createStatement()) {
 
@@ -67,7 +67,7 @@ public class ModeloUsuario {
 
         Usuario usuario1 = null;
 
-        try (Connection con = Coneccion.getConeccion()) {
+        try (Connection con = Coneccion.getInstancia().getConeccion()) {
             try (PreparedStatement pstmt = con.prepareStatement("select * from usuario where usuario = ? and clave= ?")) {
 
                 pstmt.setString(1, usuario);
