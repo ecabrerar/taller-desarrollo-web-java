@@ -8,7 +8,10 @@ import javax.servlet.http.HttpSession;
 import org.ecabrerar.examples.servlet.datamanager.ModeloUsuario;
 import org.ecabrerar.examples.servlet.entidades.Usuario;
 
-
+/**
+ * @author ecabrerar
+ * @date Jul 19, 2016
+ */
 public class LoginServlet extends HttpServlet {
     private static final String CONTENT_TYPE = "text/html; charset=UTF-8";
 

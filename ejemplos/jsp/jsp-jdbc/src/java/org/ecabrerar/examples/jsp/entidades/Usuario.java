@@ -1,5 +1,9 @@
 package org.ecabrerar.examples.jsp.entidades;
 
+/**
+ * @author ecabrerar
+ * @date Jul 19, 2016
+ */
 public class Usuario {
     private int codigo;
     private String nombres;
